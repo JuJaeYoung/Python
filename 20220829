@@ -1,0 +1,104 @@
+#1 구구단 작성
+for i in range(2,10):
+    print(i,'단\n')
+    for j in range(1,10):
+        print('{} X {} = {}'.format(i,j,i*j))
+    print('\n')
+
+
+for i in range(2,10):
+    print(i,'단\n')
+    for j in range(1,10):
+       print(i,'X',j,'=',i*j)
+    print('\n')
+
+
+#2
+friends = ['재영','규환','상현','태웅']
+for i in friends:
+    print('<',i,'> 님은 최종면접에 합격하셨습니다!\n')
+print('축하합니다!')
+
+
+#3
+a = [3,41,12,9,74,15]
+max_a = 0
+min_a = 0
+
+for i in range(6):
+    if i == 0:
+        max_a = a[i]
+        min_a = a[i]
+    else:
+        if max_a < a[i]:
+            max_a = a[i]
+            
+        elif a[i] < min_a:
+            min_a = a[i]
+
+    
+print('최댓값:',max_a,'\n최솟값:',min_a)
+
+j = 0
+
+while True:
+    try:
+        if j == 0:
+            max_a = a[j]
+            min_a = a[j]
+
+        else:
+            if max_a < a[j]:
+                max_a = a[j]
+                
+            elif a[j] < min_a:
+                min_a = a[j]
+        j += 1
+        
+    except:
+        break
+
+print('최댓값:',max_a,'\n최솟값:',min_a)
+
+
+#4
+count = 0
+sum = 0
+score = [9,41,12,3,74,15]
+
+for i in range(6):
+    sum += score[i]
+    count += 1
+
+print('합계:', sum)
+print('평균:', sum / count)
+
+
+#5 n명에 대해 3개의 점수를 입력받아서 과목별 총점 / 과목별 평균 / 개개인 총점 / 개개인 평균 표 만들기 (리스트로?)
+
+a = []  # 학생들
+b = []  # 국어점수
+c = []  # 수학점수
+d = []  # 영어점수
+count = 0
+
+while True:
+    n = int(input('학생 번호:'))            # 학생 번호 입력
+    if n == 0:
+        print('-끝-')
+        break
+    
+    kor = int(input('국어 점수:'))         # 국어 점수 입력
+    mat = int(input('수학 점수:'))          # 수학 점수 입력
+    eng = int(input('영어 점수:'))          # 영어 점수 입력
+    
+    x = [kor,mat,eng]
+    a.append(x)
+    b.append(kor)
+    c.append(mat)
+    d.append(eng)
+    count += 1
+
+    for i in range(count):
+        print(i+1,'번 학생의 총점:',)
+        print(i+1,'번 학생의 평균:',)
