@@ -11,3 +11,43 @@
 - %s : 문자열
 - %c : 단일문자
 - %x : 16진수
+
+# 1 문자열 출력
+x = 1
+y = 2
+print('X = %d, Y = %d, X + Y = %d' %(x,y,x+y))
+print('X = {}, Y = {}, X + Y = {}'.format(x,y,x+y))         # 포맷 출력
+print(f'X = {x}, Y = {y}, X + Y = {x+y}')                   # 보간문자열 출력
+s = f'X = {x}, Y = {y}, X + Y = {x+y}'                      # 다른 변수에 저장 가능
+print(s)
+a = f'X = {x}, Y = {y}, X + Y = {x+y}, str = {"test"}'      # 문자열 추가 할 땐 따옴표 구분!
+print(a)
+
+
+# 2 자리수 고정 (정수%d, 실수(소수)%f, 문자열%s, 단일문자%c)
+st1 = f'str = {"%10s"%"test"}'                              # 10자리 공백 설정
+print(st1)
+st2 = f'str = {"[%10s]"%"test"}'
+print(st2)
+
+s1 = f'X = {"[%10d]"%x}, Y = {y}, X + Y = {x+y}'
+print(s1)
+
+
+# 3 아스키코드 값 출력 (%c 이용)
+q = 50
+c1 = f'문자코드 value : {q} => 문자 : [{"%c"%q}]'
+print(c1)
+w = 80
+c2 = f'문자코드 value : {w} => 문자 : [{"%c"%w}]'
+print(c2)
+
+
+# 4 문자열 비교 (사전 생각하면 됨)
+a = 'abc'
+b = 'abc1'
+print(a > b)
+print(a == b)
+print(a < b)
+print(a >= b)
+print(a <= b)
