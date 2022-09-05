@@ -71,6 +71,48 @@ file = file(file_)
 print(f'PS = {ps}\nPZ.x = {pz_x}, PZ.y = {pz_y}, PZ.w = {pz_w}, PZ.h = {pz_h}\nFILE = {file}')
 
 
+# 3
+str1 = '/FILE=test.py /PZ:2,3,100,100 /PS:121'
+
+def split( s ) :                # '/' 으로 분리 함수
+    x = s.split('/')
+
+    return x
+
+def ps( a ) :                   # ps 함수
+    x = a.split(':')
+    
+    return x[1]
+    
+def pz( b ) :                   # pz 함수
+    x = b.split(':')
+    y = x[1].split(',')
+    
+    return y
+
+def file( c ) :                 # file 함수
+    x = c.split('=')
+    
+    return x[1]
+
+for x in split(str1) :          # 분리된 문자열에서 ps, pz, file 구분
+    if "PS" in x :
+        ps_ = x.strip()
+        
+    elif "PZ" in x :
+        pz_ = x.strip()
+        
+    elif "FILE" in x :
+        file_ = x.strip()
+        
+
+ps = ps(ps_)
+pz_x, pz_y, pz_w, pz_h = pz(pz_)
+file = file(file_)
+
+print(f'PS = {ps}\nPZ.x = {pz_x}, PZ.y = {pz_y}, PZ.w = {pz_w}, PZ.h = {pz_h}\nFILE = {file}')
+
+
 
 # 강사님 풀이
 str2 = '/PZ:2,3,100,100 /FILE=test.py /PS:121'
