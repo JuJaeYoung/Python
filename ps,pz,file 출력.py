@@ -166,12 +166,12 @@ def Main() :                    # 옵션 해석 프로그램 메인 루틴
     for s1 in s :
         if s1[0:2] == "PS" :
             b = getOptionValue(s1,":")
-            print(f"PS(1) = {b}")
+            print(f"PS = {b}")
         elif s1[0:2] == "PZ" :
             a = get_PZ(s1)
             print(f"PZ.x = {a[0]}\nPZ.y = {a[1]}\nPZ.w = {a[2]}\nPZ.h = {a[3]}")
         elif s1[0:4] == "FILE" :
             b = getOptionValue(s1, "=")
-            print(f"FILE(1) = {b}")
+            print(f"FILE = {b}")
 
 Main()
