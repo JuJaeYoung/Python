@@ -114,8 +114,10 @@ print(f'PS = {ps}\nPZ.x = {pz_x}, PZ.y = {pz_y}, PZ.w = {pz_w}, PZ.h = {pz_h}\nF
 
 
 
-# 강사님 풀이
-str2 = '/PZ:2,3,100,100 /FILE=test.py /PS:121'
+# 강사님 풀이 1
+str0 = "/PS:121 /PZ:2,3,100,100 /FILE=test.py"
+str1 = "/PZ:2,3,100,100 /PS:121 /FILE=test.py"
+str2 = "/PZ:2,3,100,100 /FILE=test.py /PS:121"
 
 def get_PS(s) :                 # /PS 옵션을 인수로 받아서 옵션의 값을 리턴
     x = s.split(":")            # s = /PS:121
@@ -129,3 +131,47 @@ def get_PZ(s) :                 # /PZ 옵션을 인수로 받아서 옵션의 �
 def get_FILE(s) :               # /FILE 옵션을 인수로 받아서 옵션의 값을 리턴
     x = s.split("=")            # s = /FILE=test.py
     return x[1]
+
+def Main() :                    # 옵션 해석 프로그램 메인 루틴
+    s = str0.split('/')
+    for s1 in s :
+        if s1[0:2] == "PS" :
+            a = get_PS(s1)
+            print(f"PS = {a}")
+        elif s1[0:2] == "PZ" :
+            a = get_PZ(s1)
+            print(f"PZ.x = {a[0]}\nPZ.y = {a[1]}\nPZ.w = {a[2]}\nPZ.h = {a[3]}")
+        elif s1[0:4] == "FILE" :
+            a = get_FILE(s1)
+            print(f"FILE = {a}")
+
+Main()
+
+
+# 강사님 풀이 2
+str0 = "/PS:121 /PZ:2,3,100,100 /FILE=test.py"
+str1 = "/PZ:2,3,100,100 /PS:121 /FILE=test.py"
+str2 = "/PZ:2,3,100,100 /FILE=test.py /PS:121"
+
+def getOptionValue(s,d) :       # /_xxx_(d)_vvv_ 옵션을 인수로 받아서 옵션의 값(val) 리턴
+        x = s.split(d)          # s : PS, FILE 옵션 , d : 구분자
+        return x[1]
+    
+def get_PZ(s) :                 # /PZ 옵션을 인수로 받아서 옵션의 값을 x,y,w,h 리스트로 리턴 
+    x = s.split(":")            # s = /PZ:2,3,100,100
+    y = x[1].split(",")         # y = ['2', '3', '100', '100']
+
+def Main() :                    # 옵션 해석 프로그램 메인 루틴
+    s = str0.split('/')
+    for s1 in s :
+        if s1[0:2] == "PS" :
+            b = getOptionValue(s1,":")
+            print(f"PS(1) = {b}")
+        elif s1[0:2] == "PZ" :
+            a = get_PZ(s1)
+            print(f"PZ.x = {a[0]}\nPZ.y = {a[1]}\nPZ.w = {a[2]}\nPZ.h = {a[3]}")
+        elif s1[0:4] == "FILE" :
+            b = getOptionValue(s1, "=")
+            print(f"FILE(1) = {b}")
+
+Main()
