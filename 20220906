@@ -1,0 +1,28 @@
+# 리스트 [] , 튜플 () , 딕셔너리 {}
+# dictionary
+# dict() : 호출
+# key(문자열), value(숫자, 문자) 가 존재
+# list의 인덱스번호 처럼 dict에는 이름을 넣어서 호출
+# key와 value를 지정해서 넣을 수 있음. (존재하지 않는 key라도 추가 가능
+ex) purse = dict()
+    purse['money'] = 12
+    purse['candy'] = 3
+    print(purse) => {'money': 12, 'candy': 3}
+# 값을 찾기 위해 숫자 대신 키를 사용
+# get 메소드 : 내가 찾고자 하는 키가 있다면 값을 가져오고, 키가 없다면 디폴트 값을 나타냄.
+
+#1
+counts = dict()
+names = ['csev','cwen','csev','zqian','cwen']       # list
+for name in names:
+    counts[name] = counts.get(name,0) + 1           # 값이 없다면 기본값 0을 준 후 +1, 값이 있다면 +1
+print(counts)
+
+#2
+ddic = {}
+lst = ["길동","길순","길영","길민","길순","길영"]
+# ddic = {"길동":1,"길순":2,"길영":2,"길민":1} 를 원함
+
+for name in lst:
+    ddic[name] = ddic.get(name,0) + 1       # ddic에 name값이 없으면 기본값 0을 주고 +1
+print(ddic)
