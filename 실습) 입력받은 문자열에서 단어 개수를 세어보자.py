@@ -1,5 +1,5 @@
 def rp(x, op) :                         # 기호 입력받아서 제거하는 함수
-    result = x.replace(op,'')
+    result = x.replace(op,' ')
     return result
 
 x = {}
@@ -9,7 +9,6 @@ z = ['.',',','?','“','”','(',')']       # 제거 할 기호
 for i in z:                             # 기호 제거 중..
     y = rp(y,i)
     
-y = y.replace('-',' ')                  # 기호 제거 중..
 y = y.lower()                           # 소문자로 변경 중..
 
 lst = y.split()                         # 공백단위 분리 후 리스트로 !
