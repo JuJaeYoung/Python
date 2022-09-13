@@ -14,7 +14,7 @@ while True :
 
 
 # 실수 입력 받으면 실수라고 정수 입력 받으면 정수라고 숫자 아니면 숫자가 아닙니다.
-
+#1
 y = input('숫자를 입력해 주세요. : ')
 
 while True :
@@ -31,3 +31,16 @@ while True :
     except :
         print('숫자가 아닙니다.')
         y = input('숫자를 다시 입력해 주세요. : ')
+
+#2
+while True :
+    s = input('숫자를 입력하세요 : ')
+    try :
+        i = int(s)
+        print(i)
+    except :
+        try :
+            j = float(s)
+            print(j)
+        except :
+            print('똑바로 입력하세요.')
