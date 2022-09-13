@@ -1,0 +1,33 @@
+# 키보드에서 문자열을 입력받고 숫자로 변환하는 프로그램 (단, 입력 오류시 다시 입력하도록.)
+
+x = input('숫자를 입력해 주세요. : ')
+
+while True :
+    try :
+        n = float(x)
+        print(f'문자열:{x} --> 숫자:{n}')
+        break
+
+    except :
+        print('---입력값 오류---')
+        x = input('숫자를 다시 입력해 주세요. : ')
+
+
+# 실수 입력 받으면 실수라고 정수 입력 받으면 정수라고 숫자 아니면 숫자가 아닙니다.
+
+y = input('숫자를 입력해 주세요. : ')
+
+while True :
+    try :
+        a = y.find('.')
+        if a > 0:
+            n = float(y)
+            print(f'문자열:{y} --> 실수:{n}')
+            break
+        elif a == -1 :
+            n = int(y)
+            print(f'문자열:{y} --> 정수:{n}')
+            break
+    except :
+        print('숫자가 아닙니다.')
+        y = input('숫자를 다시 입력해 주세요. : ')
