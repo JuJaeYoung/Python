@@ -1,0 +1,21 @@
+point blue 20 0
+move -240 0
+circle 100 360
+
+point yellow 20 0
+move -120 -100
+circle 100 360
+
+point black 20 0
+circle 100 360
+
+point green 20 0
+move 120 -100
+circle 100 360
+
+point red 20 0
+move 240 0
+circle 100 360
+
+
+

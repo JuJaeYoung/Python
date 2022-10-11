@@ -1,0 +1,12 @@
+point yellow 10 5
+move 0 300
+angle 252
+line 500
+angle 36
+line 500
+angle 180
+line 500
+angle 324
+line 500
+angle 108
+line 500
