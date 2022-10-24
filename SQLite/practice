@@ -1,0 +1,11 @@
+# 조회(조건 검색)
+select (colunm) from table ...
+
+# 새로운 행 삽입
+insert into table (colunm) values (values)
+
+# 존재하는 행 변경
+update table set colunm
+
+# 테이블 수정
+alter table 테이블명 
