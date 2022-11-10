@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1120</width>
+    <height>894</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QPushButton" name="openBtn">
+    <property name="geometry">
+     <rect>
+      <x>740</x>
+      <y>680</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Open</string>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="openText">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>670</y>
+      <width>671</width>
+      <height>61</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QListView" name="upText">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>750</y>
+      <width>671</width>
+      <height>61</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="leaBtn">
+    <property name="geometry">
+     <rect>
+      <x>740</x>
+      <y>730</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Leaning</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="actBtn">
+    <property name="geometry">
+     <rect>
+      <x>740</x>
+      <y>780</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Result</string>
+    </property>
+   </widget>
+   <widget class="QListView" name="G1">
+    <property name="geometry">
+     <rect>
+      <x>710</x>
+      <y>150</y>
+      <width>401</width>
+      <height>361</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QListView" name="resText">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>20</y>
+      <width>651</width>
+      <height>621</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="hrChk">
+    <property name="geometry">
+     <rect>
+      <x>860</x>
+      <y>670</y>
+      <width>81</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Hour</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="tempChk">
+    <property name="geometry">
+     <rect>
+      <x>860</x>
+      <y>700</y>
+      <width>81</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Temperature</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="preChk">
+    <property name="geometry">
+     <rect>
+      <x>860</x>
+      <y>730</y>
+      <width>81</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Precipitation</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="windChk">
+    <property name="geometry">
+     <rect>
+      <x>860</x>
+      <y>760</y>
+      <width>81</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Windspped</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="humiChk">
+    <property name="geometry">
+     <rect>
+      <x>860</x>
+      <y>790</y>
+      <width>81</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Humidity</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="cntChk">
+    <property name="geometry">
+     <rect>
+      <x>960</x>
+      <y>760</y>
+      <width>81</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Count</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="visiChk">
+    <property name="geometry">
+     <rect>
+      <x>960</x>
+      <y>670</y>
+      <width>81</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Visibility</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="pm10Chk">
+    <property name="geometry">
+     <rect>
+      <x>960</x>
+      <y>700</y>
+      <width>81</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Pm10</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="pm25Chk">
+    <property name="geometry">
+     <rect>
+      <x>960</x>
+      <y>730</y>
+      <width>81</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Pm2.5</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>10</y>
+      <width>56</width>
+      <height>12</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>resText</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>660</y>
+      <width>56</width>
+      <height>12</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>openText</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>740</y>
+      <width>56</width>
+      <height>12</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>upText</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="allChk">
+    <property name="geometry">
+     <rect>
+      <x>960</x>
+      <y>790</y>
+      <width>81</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>All</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>710</x>
+      <y>140</y>
+      <width>56</width>
+      <height>12</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>G1</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1120</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
