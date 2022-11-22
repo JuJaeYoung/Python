@@ -1,0 +1,15 @@
+type manage.py
+
+((DE)\DP) python manage.py runserver  # 실행
+
+((DE)\DP) python manage.py migrate  # table 생성
+
+(web) http://127.0.0.1:8000/admin  # 장고관리 로그인 화면
+
+((DE)\DP) python manage.py createsuperuser  # 계정 생성
+
+((DE)\DP) python manage.py startapp blog  # 블로그 생성
+
+((DE)\DP) python manage.py makemigrations blog  # 새로운 class 추가하면 실행1
+
+((DE)\DP) python manage.py migrate blog  # 실행2
