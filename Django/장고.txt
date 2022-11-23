@@ -1,4 +1,4 @@
-type manage.py
+de\scripts\activate  # 가상환경 DE로 이동
 
 ((DE)\DP) python manage.py runserver  # 실행
 
@@ -10,6 +10,13 @@ type manage.py
 
 ((DE)\DP) python manage.py startapp blog  # 블로그 생성
 
+setting 추가
+admin 추가
+models 추가
+
 ((DE)\DP) python manage.py makemigrations blog  # 새로운 class 추가하면 실행1
 
 ((DE)\DP) python manage.py migrate blog  # 실행2
+
+bat 파일 생성 (자주쓰는 커맨드 지정)
+=> python manage.py 를 dc로     ex) dc startapp blog
