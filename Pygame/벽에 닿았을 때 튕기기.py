@@ -29,6 +29,20 @@ while play:
     x_pos_banana += x_speed_banana
     y_pos_banana += y_speed_banana
 
+    if x_pos_banana <= 0:
+        x_speed_banana = -x_speed_banana
+        x_pos_banana = 0
+    elif x_pos_banana >= size_bg_width - size_banana_width:
+        x_speed_banana = -x_speed_banana
+        x_pos_banana = size_bg_width - size_banana_width
+
+    if y_pos_banana <= 0:
+        y_speed_banana = -y_speed_banana
+        y_pos_banana = 0
+    elif y_pos_banana >= size_bg_height - size_banana_height:
+        y_speed_banana = -y_speed_banana
+        y_pos_banana = size_bg_height - size_banana_height
+    
     background.blit(image_bg, (0,0))
     background.blit(image_banana, (x_pos_banana, y_pos_banana))
     pygame.display.update()
